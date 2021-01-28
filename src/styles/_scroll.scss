@@ -1,0 +1,16 @@
+
+.purposes-tasks::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 10px
+}
+
+.purposes-tasks::-webkit-scrollbar-track {
+    background: rgb(255,255,255);
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+.purposes-tasks::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    border-radius: 10px;
+}

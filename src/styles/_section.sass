@@ -1,0 +1,204 @@
+.sect
+	padding-top: 25px
+	padding-bottom: 25px
+	background-color: $yellow
+	min-height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	&-container
+		max-width: 686px
+		width: 100%
+		margin: 0 auto
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 0 15px
+	&__data
+		font-size: 20px
+		margin-bottom: 25px
+	&-tabs
+		display: flex
+		justify-content: center
+		margin: auto
+		max-width: 418px
+		&__item
+			margin: 0 -2px
+		&__link
+			font-size: 18px
+			color: $blue
+			text-decoration: none
+			padding: 9px 33px
+			margin-bottom: -2px
+			display: inline-block
+			border: 2px solid transparent
+			border-bottom: 2px solid $blue
+			&--active
+				border-color: $blue
+				border-top-left-radius: 5px
+				border-top-right-radius: 5px
+			&:not(.sect-tabs__link--active):hover
+				color: #000
+
+
+
+.block
+	height: 453px
+
+.form-control
+	position: relative
+	margin-bottom: 35px
+	&--selected
+		position: relative
+		z-index: 5
+
+		select
+			cursor: pointer
+			appearance: none
+			position: relative
+		label
+			font-size: 12px
+			top: -19px
+			left: 0
+			color: #000
+			font-weight: 500
+
+.block
+	margin-top: 45px
+
+.triangle
+	background-color: #111
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	right: 20px
+	cursor: pointer
+
+
+textarea
+	width: 100%
+	min-height: 178px
+	border: 1px solid transparent
+
+label
+	position: absolute
+	top: 16px
+	left: 22px
+	color: #777
+	font-size: 18px
+	cursor: text
+	transition: 0.2s ease-in-out
+
+label.error, label.error.active
+	color: red
+
+input, textarea
+	border: 1px solid transparent
+
+input.error, textarea.error
+	border: 1px solid red
+
+label.active
+	font-size: 12px
+	top: -19px
+	left: 0
+	color: #000
+	font-weight: 500
+
+.input, textarea, select, .add__btn
+	display: block
+	width: 100%
+	padding: 16px 22px
+	font-size: 18px
+	border-radius: 8px
+	font-family: 'Roboto Slab', sans-serif
+	border: none
+
+label
+	font-size: 18px
+	border: none
+
+.add__btn
+	cursor: pointer
+	background-color: $blue
+	color: #fff
+	transition: 0.25s ease-in-out
+	&:hover
+		box-shadow: 0 0 7px $blue
+ 
+
+
+.purposes-task
+	background-color: $blue
+	color: #fff
+	text-align: left
+	border-radius: 6px
+	margin-bottom: 28px
+	&s
+		max-height: 362px
+		width: calc(100% + 7px)
+		padding-right: 20px
+		overflow-y: scroll
+		box-sizing: content-box
+		::-webkit-scrollbar-thumb
+		    border-radius: 2px
+		    background-color: #d1d1d1
+		  
+
+
+
+	&:last-child
+		margin-bottom: 0
+
+.purpose
+	&-top
+		font-size: 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&-top, &-mid, &-bottom
+		padding: 15px
+	&-mid
+		padding: 12px 15px
+	&-mid, &-top
+		border-bottom: 1px solid $yellow
+	&-mid
+		font-weight: 300
+		line-height: 1.8
+		font-size: 16px
+	&-bottom
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-size: 12px
+		&__tag, &__date
+			background-color: $yellow
+			color: $blue
+			font-weight: 500
+			padding: 4px 13px
+			border-radius: 3px
+			text-align: center
+		&__tag
+			max-width: 92px
+			width: 100%
+	&-close
+		border-radius: 50%
+		border: none
+		background-color: $yellow
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+		img
+		width: 27px
+		height: 27px
+
+
+
+@media (max-width: 740px) 
+	.purposes-tasks
+		width: calc(100% - 7px)
+		padding-right: 10px
+
+

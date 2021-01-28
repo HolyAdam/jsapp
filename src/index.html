@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ToDo Приложение</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+	<header class="header" id="header">
+		<div class="header-content">
+			<img src="img/logo.svg" class="header-content__img" alt="Логотип">
+			<div class="header-content__title">
+				Создавайте задачи и решайте их
+			</div>
+			<div class="header-content__subtitle">
+				Ваш личный помощник в планировании
+			</div>
+			<button class="header-content__btn">
+				Приступить
+			</button>
+		</div>
+	</header>
+
+	<section class="sect hide">
+		<div class="sect-container">
+			<div class="sect-top">
+				<div class="sect__data">
+					Текущая дата: <span>05/01/2020</span>
+				</div>
+				<ul class="sect-tabs" id="tabs">
+					<li class="sect-tabs__item">
+						<a href="#" class="sect-tabs__link sect-tabs__link" data-tab="purposes">
+							Мои задачи
+						</a>
+					</li>
+					<li class="sect-tabs__item">
+						<a href="#" class="sect-tabs__link sect-tabs__link--active" data-tab="form">
+							Добавить задачу
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<form class="add block" id="form">
+				<div class="form-control">
+					<label for="name">Введите задачу</label>
+					<input type="text" name="name" class="input add__name" id="name">
+				</div>
+
+				<div class="form-control">
+					<label for="descr">Введите описание</label>
+					<textarea name="descr" class="add__descr" id="descr"></textarea>
+				</div>
+
+				<div class="form-control form-control--selected">
+					<label for="std">Введите тип</label>
+					<div class="triangle"></div>
+					<select id="std" name="std" style="background-image: url('img/sort-down.png'); background-repeat: no-repeat; background-position: right 20px top 22px">
+						<option value="purpose">Цель</option>
+						<option value="habit">Привычка</option>
+					</select>
+				</div>
+
+				<button class="add__btn" name="btn">
+					Добавить
+				</button>
+			</form>
+
+
+			<div class="purposes block hide" id="purposes">
+
+				<div class="form-control">
+					<input type="text" name="search" id="search" class="input">
+					<label for="search">Поиск задачи</label>
+				</div>
+
+				<div class="lds-roller" id="loader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+				<ul class="purposes-tasks">
+					<li class="purposes-task">
+						<div class="purpose-top">
+							<div class="purpose-text">
+								<span class="purpose-num">
+									1.
+								</span>
+								<span class="purpose-title">
+									Поиграть в игру League of Legends
+								</span>
+							</div>
+							<button class="purpose-close">
+								<img src="img/close.svg" alt="Закрыть">
+							</button>
+						</div>
+						<div class="purpose-mid">
+							Нечетная функция, общеизвестно, синхронизирует неопределенный интеграл. Дело в том, что функция многих переменных специфицирует интеграл Гамильтона. Математическое моделирование.
+						</div>
+						<div class="purpose-bottom">
+							<div class="purpose-bottom__tag">
+								Привычка
+							</div>
+							<div class="purpose-bottom__date">
+								02.01.2021
+							</div>
+						</div>
+					</li>
+					<li class="purposes-task">
+						<div class="purpose-top">
+							<div class="purpose-text">
+								<span class="purpose-num">
+									2.
+								</span>
+								<span class="purpose-title">
+									Скачать пазл
+								</span>
+							</div>
+							<button class="purpose-close">
+								<img src="img/close.svg" alt="Закрыть">
+							</button>
+						</div>
+						<div class="purpose-mid">
+							Скачать пазл в интернете бесплатно
+						</div>
+						<div class="purpose-bottom">
+							<div class="purpose-bottom__tag">
+								Цель
+							</div>
+							<div class="purpose-bottom__date">
+								02.01.2021
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+
+
+		</div>
+	</section>
+
+
+
+
+
+</body>
+</html>
